@@ -1,4 +1,19 @@
-<!DOCTYPE html>
+<!DOCTYPE html><html lang="en-US" data-baseurl="https://www.epicgames.com/fortnite"><head><meta charSet="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=11;IE=Edge,chrome=1"><meta name="theme-color" content="#f6f7f9"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"><meta name="host" content="fortnite-website-prod07-i-0fd7f8a0139941bc1"><meta name="worker" content="119"><meta name="theme-color" content="#2a2a2a"><meta name="template:engine" content="pug"><meta name="google-site-verification" content="xU97UAkdrfiZPCvgGO2haoL_DnAFsljisGJSlNOmyhA"><link rel="shortcut icon" href="https://static-assets-prod.epicgames.com/fortnite/static/webpack/../favicon.ico" type="image/x-icon"><script>(function() {
+    try {
+        if('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register("/fortnite/epic-service-worker.js", {scope: '/fortnite/'})
+                    .catch(function (err) {
+                        console.log('Service workers are not supported by this browser');
+                        console.error(err);
+                    });
+            });
+        }
+    } catch (e) {
+        console.log('Service worker failed to activate and install', e);
+    }
+})();
 <link rel="stylesheet" type="text/css" href="https://tfngames.github.io/style.css">
 <html>
     <body>
